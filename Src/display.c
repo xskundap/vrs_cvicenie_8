@@ -167,7 +167,7 @@ void setZero(void)
 	LL_GPIO_ResetOutputPin(SEGMENTB_PORT, SEGMENTB_PIN);
 }
 
-////////
+///////
 
 void setA(void)
 {

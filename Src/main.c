@@ -91,6 +91,7 @@ int main(void)
 		  pole[2] = retazec[j-2];
 		  pole[3] = retazec[j-1];
 		  pole[4] = '\0';
+		  
 		  /*
 		  while(start != 1){
 			  ;

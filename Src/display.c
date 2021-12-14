@@ -860,7 +860,6 @@ void TIM2_IRQHandler(void)
 	if(LL_TIM_IsActiveFlag_UPDATE(TIM2))
 	{
 		updateDisplay(pole);
-		start = 1;
 	}
 
 	LL_TIM_ClearFlag_UPDATE(TIM2);

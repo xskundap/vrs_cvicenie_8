@@ -33,7 +33,7 @@ uint64_t saved_time;
 double num_to_display = 10;
 
 //char retazec[] = "123456789\0";
-char retazec[] = "Marian_Tvarozek_98374_Peter_Skunda_98371";
+char retazec[] = "Marian_Tvarozek_98374_Peter_Skunda_98371\0";
 
 extern char pole[4];
 int start = 0;
@@ -64,41 +64,13 @@ int main(void)
   int i = 0;
   while (1)
   {
-/*
-	  for (int i = 0; i < dlzka; i++){
-
-		  pole[0] = retazec[i];
-		  pole[1] = retazec[i+1];
-		  pole[2] = retazec[i+2];
-		  pole[3] = retazec[i+3];
-		  pole[4] = '\0';
-
-		  while(disp_time <= (saved_time + 500)){
-			  saved_time = disp_time;
-		  }
-
-	  }
-	  for (int j = dlzka; j > 0; j--){
-
-		  pole[0] = retazec[j-4];
-		  pole[1] = retazec[j-3];
-		  pole[2] = retazec[j-2];
-		  pole[3] = retazec[j-1];
-		  pole[4] = '\0';
-
-		  while(disp_time <= (saved_time + 500)){
-			  saved_time = disp_time;
-		  }
-
-	  }
-*/
 	  if(pom == 1){
 		  if(disp_time > (saved_time + 500)){
 			  pole[3] = retazec[i];
 			  pole[2] = retazec[i+1];
 			  pole[1] = retazec[i+2];
 			  pole[0] = retazec[i+3];
-			  //pole[4] = '\0';
+			  pole[4] = '\0';
 			  i++;
 			  saved_time = disp_time;
 			  if(i >= (dlzka-4)){
@@ -109,18 +81,12 @@ int main(void)
 
 	  if(pom == 0){
 		  if(disp_time > (saved_time + 500)){
-/*
-			  pole[0] = retazec[i-4];
-			  pole[1] = retazec[i-3];
-			  pole[2] = retazec[i-2];
-			  pole[3] = retazec[i-1];
-*/
 			  pole[3] = retazec[i];
 			  pole[2] = retazec[i+1];
 			  pole[1] = retazec[i+2];
 			  pole[0] = retazec[i+3];
 
-			  //pole[4] = '\0';
+			  pole[4] = '\0';
 			  i--;
 			  saved_time = disp_time;
 			  if(i <= 0){
@@ -128,19 +94,7 @@ int main(void)
 			  }
 		  }
 	  }
-	  /*
-	  if(disp_time > (saved_time + 100))
-	  {
-		  displayNumber(num_to_display);
-	  	  num_to_display -= 0.10;
-	  	  saved_time = disp_time;
-
-	  	  if(num_to_display <= 0)
-	  	  {
-	  		  num_to_display = 100;
-	  	  }
-	  }
-	  */
+	 
   }
 
 
